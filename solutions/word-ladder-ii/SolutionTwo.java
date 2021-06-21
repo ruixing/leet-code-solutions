@@ -1,3 +1,9 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 class SolutionTwo {
     private class WordTree {
         private String word;
@@ -9,7 +15,7 @@ class SolutionTwo {
             this.word = word;
             this.depth = depth;
             this.matched = false;
-            this.children = new ArrayList();
+            this.children = new ArrayList<>();
         }
 
         public WordTree addChild(String word) {
@@ -82,8 +88,8 @@ class SolutionTwo {
 
     private List<List<String>> getAllMatchedRoute(WordTree root, int shortest, List<String> oneRoute, List<List<String>> allRoutes) {
         if (oneRoute == null || allRoutes == null) {
-            allRoutes = new ArrayList();
-            oneRoute = new ArrayList();
+            allRoutes = new ArrayList<>();
+            oneRoute = new ArrayList<>();
         }
         if (root != null) {
             oneRoute.add(root.word);

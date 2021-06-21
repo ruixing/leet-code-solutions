@@ -13,7 +13,7 @@ class SolutionOne {
             this.word = word;
             this.depth = depth;
             this.matched = false;
-            this.children = new ArrayList();
+            this.children = new ArrayList<>();
         }
 
         public WordTree addChild(String word) {
@@ -34,8 +34,8 @@ class SolutionOne {
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         int minDepth = letterDiffer(beginWord, endWord) -  1;
         int endIdx = wordList.indexOf(endWord);
-        List<List<String>> allRoutes = new ArrayList();
-        List<String> oneRoute = new ArrayList();
+        List<List<String>> allRoutes = new ArrayList<>();
+        List<String> oneRoute = new ArrayList<>();
 
         if (endIdx < 0) {
             return allRoutes;
